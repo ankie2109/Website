@@ -1,0 +1,295 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0 ;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+.logo img {
+    width: 100px;
+    margin-left: 0px;
+      
+}
+
+/* Desktop Navigation */
+nav {
+    position: absolute;
+    top: 10px; /* Positions the navigation at the top */
+    right: 20px; /* Aligns the navigation to the right */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    
+    
+    
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+    
+    
+}
+
+.nav-links li a {
+    color: #03045E;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    
+    
+}
+
+.nav-links li:hover > a {
+    color: #ade8f4;
+}
+
+/* Dropdown Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px 0;
+    list-style-type: none;
+    min-width: 150px;
+    z-index: 1000;
+}
+.nav-links li:hover .dropdown-content,
+.nav-links li .dropdown-content.show-dropdown {
+  display: block;
+}
+
+.dropdown-content li {
+    text-align: left;
+    padding: 8px 16px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+   
+}
+
+/* Add Arrow beside "About Us" */
+.arrow {
+    font-size: 20px;
+    margin-left: 1px;
+    color: #03045E;
+}
+
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  margin: 22px;
+}
+/* Menu Button (hidden on larger screens) */
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    color: #03045E;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #03045E;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+/* For devices with a maximum width of 768px (tablets, small screens) */
+@media (max-width: 768px) 
+{
+  
+    header {
+        position: relative;
+    }
+  
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        height: 100vh;
+        justify-content: center; /* Vertically center the links */
+        align-items: center;
+        z-index: 9;
+        
+        
+    }
+    .nav-links.active  {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+            
+    }
+  
+    .dropdown-content {
+        display: none; /* Hide dropdown content by default */
+        position: static;
+        top: -5px; /* This moves the dropdown higher in mobile view */
+        left: 50%;
+        width: 100%;
+  }
+
+    .dropdown.active .dropdown-content {
+        display: block; /* Show dropdown content when active */
+    }
+  .team-section {
+    padding: 10px;
+  }
+    .menu-btn {
+        display: flex;
+        position: absolute;
+        right: 5%;
+        top: 25%;
+        
+        
+    }
+    .nav-links a {
+        padding: 10px;
+        background-color: white;
+        text-align: center;
+        width: 100%;
+    }
+  /* Animate the bars to form an "X" when active */
+    .menu-btn.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-btn.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+  
+    
+ 
+  .nav-links li a {
+        font-size: 24px;
+        color: #03045E; /* White color for links */
+    }
+
+  .nav-links li a:hover {
+    color: #48cae4;
+}
+
+    
+    
+}
+
+
+
+.team-section {
+  
+    padding: 50px 0;
+    text-align: center;
+    
+  }
+  .team-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  .team-section h2 {
+    color: #03045E;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .team-section p{
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #03045E;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .team-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    background-color: #219ebc;
+    color: #03045E;
+    margin: 15px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .team-container {
+      flex-direction: column;
+    }
+  
+    .team-member {
+      width: 90%;
+      margin: 10px auto;
+    }
+  }

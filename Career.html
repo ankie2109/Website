@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarbit Innovations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<section id="career"></section>
+    <div class="career-container">
+        <h1>Join Us in Shaping the Future of Nanosensor Technology!</h1>
+        <p>
+            Are you passionate about cutting-edge Nano-technology and its impact on health and safety? Whether you're a researcher, 
+              collaborator, or someone looking to contribute, we'd love to hear from you. Let’s 
+              explore how we can work together to drive progress. 
+        </p>
+        <a href="Join Us.html" class="btn-join"> Join Us</a>
+    </div>
+</section>
+<div id="header"></div>
+<script src="script.js"></script>
+<div id="footer-placeholder"></div>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+</script>
+</body>
+</html>

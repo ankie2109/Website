@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarbit Innovations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- Services & Products Section -->
+<section id="services" class="section-dark">
+    <div class="services-container">
+        <h2 class="services-heading">Services & Products</h2>
+        <p id="services-description" class="services-description">
+            Sarbit Innovations is at the forefront of cutting-edge technology, offering a diverse range of products and services. We specialize in nano and biosensors for early disease detection, SERS substrates that significantly enhance detection sensitivity, and precision thin film coatings. Additionally, we provide customized micropatterning solutions tailored to specific applications. Our expertise also extends to wafer dicing and wire bonding, supporting critical processes in semiconductor and electronics manufacturing.
+        </p>
+        
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="https://i.ibb.co/fQqGg4t/Screenshot-2024-09-05-004339.png" alt="Medical Diagnostic Sensors & Systems">
+                <h3>Medical Diagnostic Sensors & Systems</h3>
+                <p>Nano Sensors & Systems for early diagnosis of various diseases.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://i.ibb.co/WsGjG9w/Screenshot-2024-09-05-004907.png" alt="Micro/ Nano Patterned Devices">
+                <h3>Micro/ Nano Patterned Devices</h3>
+                <p>Utilizing photolithography, wet-etching, and lift-off methods to generate electrodes, sensors, and biosensors from patterned metal films</p>
+            </div>
+            <div class="service-item">
+                <img src="https://i.ibb.co/Cvn1YZp/Screenshot-2024-09-05-005249.png" alt="Metals & Dielectric Coatings">
+                <h3>Metals & Dielectric Coatings</h3>
+                <p>Discover our proficiency in RF & DC Sputtering, e-beam and thermal evaporation of various metals & dielectrics</p>
+            </div>
+            <div class="service-item">
+                <img  src="https://i.ibb.co/7gTZGDc/Screenshot-2024-09-05-005555.png" alt="Service Image 4">
+                <h3>Wafer Dicing Services</h3>
+                <p>Explore our expertise in the cutting and singulation of various materials, including glass and silicon wafers</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="header"></div>
+<script src="script.js"></script>
+
+<div id="footer-placeholder"></div>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+</script>
+</body>
+</html>
