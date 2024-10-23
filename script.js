@@ -1,63 +1,35 @@
 //header section 
+// Load header.html dynamically
 fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data)
-            .catch(error => console.error('Error loading header:', error));
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header').innerHTML = data;
+        console.log("hahaha");  
+        // Toggle navigation menu for mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
 
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.querySelector('.menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-links a');
-    // Toggle the menu on click
-    menuBtn.addEventListener('click', function() {
-        menuBtn.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
-
-    // Close the menu when clicking on a navigation link and navigate to section
-    navItems.forEach(link => {
-        link.addEventListener('click', function() {
-            menuBtn.classList.remove('active');
-            navLinks.classList.remove('active');
+        menuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
         });
-    });
-});
+        
+         const teamSection = document.getElementById('team'); // Ensure 'team' exists in the current page
+                if (teamSection) { // Ensure team section exists before using it
+                    teamSection.style.display = 'block'; // Show the Team section
+                    teamSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+                     // Close the dropdown after clicking
+                } else {
+                    // If the team section is not in the current page, load the 'Team.html' page
+                    window.location.href = 'Team.html';
+                }
+            
+        
+    })
+    .catch(error => console.error('Error loading header:', error));
 
-
-// Get the elements
-const aboutUsLink = document.getElementById('about-us-link');
-const dropdownContent = document.querySelector('about-dropdown');
-const teamLink = document.getElementById('team-link');
-const teamSection = document.getElementById('team');
-const aboutSection = document.getElementById('about-us');
-
-// Toggle dropdown on click
-aboutUsLink.addEventListener('click', function(event) {
-  event.preventDefault(); // Prevent default behavior
-  dropdownContent.classList.toggle('show-dropdown'); // Toggle the dropdown visibility
-});
-
-// Show the Team section when clicked
-teamLink.addEventListener('click', function(event) {
-  event.preventDefault();
-  teamSection.style.display = 'block'; // Show the Team section
-  teamSection.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
-  dropdownContent.classList.remove('show-dropdown'); // Close the dropdown after clicking
-});
-
-
-
-
-
-
-
-
-
-
+                        
 //Gallery 
-document.addEventListener('DOMContentLoaded', ()=> {
+/*document.addEventListener('DOMContentLoaded', ()=> {
     let currentSlideIndex = 0;
     const galleryGrid = document.querySelector('.gallery-grid');
     const galleryItems = document.querySelectorAll('.gallery-item');
@@ -130,7 +102,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 
 // Form Submission 
 
-document.getElementById("myForm").addEventListener("submit", function(e) {
+/*document.getElementById("myForm").addEventListener("submit", function(e) {
     e.preventDefault(); // Prevent default form submission
     
     // Get form data
@@ -153,5 +125,5 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
     .catch(error => {
         console.error('Error:', error);
     });
-});
+});*/
 

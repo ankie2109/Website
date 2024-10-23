@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="team.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+
+  <body>
     <!-- Team Section --> 
 <section id="team" class="team-section" >
   <h2>Meet the Innovators</h2>
@@ -99,12 +100,20 @@
    
 </section>
 
-
-<div id="header"></div>
-<script src="script.js"></script>
-
-
-</body>
+    <div id ="header"></div>
+    <script src="script.js"></script>
+      
+    <div id="footer-placeholder"></div>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+</script>  
+  
+  </body>
+  
 </html>
-
-

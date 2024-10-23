@@ -15,7 +15,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="marquee behavior = "scroll" direction="left" scrollamount="10" loop="infinite" ">
+        <div class="marquee behavior = "scroll" direction="left" scrollamount="10" loop="infinite" ''>
        <p> A deep Tech Start up from Medical Technologies Program by IIT Jodhpur & AIIMS Jodhpur  </p>
      </div>
    <div class="hero-container">
@@ -144,85 +144,11 @@
                 <div class="collaborator-item">
                     <img src="https://i.ibb.co/vzQP5dg/images.jpg" alt="SINE">
                 </div>
-                <div class="collaborator-item">
-                    <img src="collaborator8.jpg" alt="Collaborator 8">
-                </div>
+                
             </div>
         </div>
     </div>
 </section>
-
-
-<div id="header"></div>
-<script src="script.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', ()=> {
-    let currentSlideIndex = 0;
-    const galleryGrid = document.querySelector('.gallery-grid');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
-
-    // Debugging: Check if the arrows are found
-    console.log("Left Arrow:", leftArrow);
-    console.log("Right Arrow:", rightArrow);
-
-    // Ensure arrows are not null
-    if (!leftArrow || !rightArrow) {
-        console.error("Left or Right arrow elements not found!");
-        return; // Exit if elements are missing
-    }
-
-    // Dynamically calculate items per slide based on screen size
-    function getItemsPerSlide() {
-        return window.innerWidth <= 768 ? 1 : 4; // 1 item per slide on mobile, 4 on larger screens
-    }
-
-    // Recalculate total slides based on items per slide
-    function getTotalSlides() {
-        const itemsPerSlide = getItemsPerSlide();
-        return Math.ceil(galleryItems.length / itemsPerSlide);
-    }
-
-    function showSlide(index) {
-        const itemsPerSlide = getItemsPerSlide(); // Recalculate items per slide
-        const itemWidthPercentage = 100 / itemsPerSlide; // Calculate width based on items per slide
-        galleryGrid.style.transform = `translateX(${-index * itemWidthPercentage}%)`;
-    }
-
-    // Move to the next slide
-    function nextSlide() {
-    const totalSlides = getTotalSlides(); // Recalculate total slides
-        if (currentSlideIndex < totalSlides - 1) {
-            currentSlideIndex++;
-        } else {
-            currentSlideIndex = 0;
-        }
-        showSlide(currentSlideIndex);
-    }
-    // Move to the previous slide
-    function prevSlide() {
-    const totalSlides = getTotalSlides(); // Recalculate total slides
-        if (currentSlideIndex > 0) {
-            currentSlideIndex--;
-        } else {
-            currentSlideIndex = totalSlides - 1;
-        }
-        showSlide(currentSlideIndex);
-    }
-
-    // Add event listeners for buttons using JavaScript
-    rightArrow.addEventListener('click', nextSlide);
-    leftArrow.addEventListener('click', prevSlide);
-
-    // Recalculate the layout on window resize for responsiveness
-    window.addEventListener('resize', () => {
-        showSlide(currentSlideIndex); // Maintain the current slide index when resizing
-    });
-});
-
-</script>
 
 <div id="footer-placeholder"></div>
 <script>
@@ -235,6 +161,9 @@
         });
 </script>
 
+
+<div id="header"></div>
+<script src="script.js"></script>
 </body>
 </html>
 

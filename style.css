@@ -202,6 +202,7 @@ nav {
         position: absolute;
         right: 5%;
         top: 25%;
+        z-index: 11;
         
         
     }
@@ -211,18 +212,7 @@ nav {
         text-align: center;
         width: 100%;
     }
-  /* Animate the bars to form an "X" when active */
-    .menu-btn.active .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menu-btn.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-btn.active .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
+  
   
     
  
@@ -471,67 +461,6 @@ nav {
 }
 
 
-.team-section {
-  
-  padding: 50px 0;
-  text-align: center;
-}
-
-.team-section h2 {
-  color: #03045E;
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
-.team-container {
-  
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.team-member {
-  background-color: #219ebc;
-  color: #03045E;
-  margin: 15px;
-  padding: 20px;
-  width: 250px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.team-member img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.team-member h3 {
-  font-size: 25px;
-  margin-bottom: 5px;
-  color: #ffffff;
-}
-
-.team-member p {
-  font-size: 22px;
-  color: #ffffff;
-}
-
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .team-container {
-    flex-direction: column;
-  }
-
-  .team-member {
-    width: 90%;
-    margin: 10px auto;
-  }
-}
 
 /* Our Mission Section */
 /* General Styles */
